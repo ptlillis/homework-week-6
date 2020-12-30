@@ -1,3 +1,11 @@
+UPDATE: this is complete, though I will be working on formatting over the next day or so.
+
+I found this to be a very difficult exercise, to be honest. So many moving parts. I'd like to review with a TA when the time comes, because I feel like I have a strong grasp of the concepts, but struggle when laying them out into the sheets. This is not what I had envisioned this page to look like, but it functions as expected.
+
+[link to deployed page](https://ptlillis.github.io/homework-week-6/)
+
+//
+
 this is incomplete as of Tuesday 12/29/20
 i have most of my code in place but still need to finesse the final functionality
 i will update and complete 12/30/20
