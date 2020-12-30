@@ -5,15 +5,16 @@
   body {
     padding: 0;
     margin: 0;
-    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 30px;
+    font-family: sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    margin-bottom: 20px;
+    background-color: black
   }
   
   .input{
     background-color: transparent;
-    background-color: white;
+    background-color: rgb(228, 228, 228);
     color: black;
     border-style: 1px solid black;
     white-space: pre-wrap;
@@ -21,8 +22,8 @@
 
   }
   .header{
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
     text-align: center;
     align-items: center;
     margin: 0px;
@@ -34,14 +35,13 @@
     width: 100%;
     margin: 0;
     padding: 0;
-    background-color:rgb(242, 248, 248);
+    background-color:rgb(255, 232, 181);
    
   }
   .first-col{
     padding-top: 10px;
     text-align: center;
-   align-items: center;
-    box-shadow: 0 0 1px black;
+    align-items: center;
     width: 20%;
     
   }
@@ -56,7 +56,7 @@
   .contentHigher{
     height: 44vh;
     width: 100%;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(253, 216, 161);
     margin-right: 0;
     padding: 30px;
     box-shadow: 0 0 1px black;
@@ -67,7 +67,7 @@
   .lower-div{
     padding: 0px;
     margin: 0px;
-    height: 45vh;
+    height: 50%;
     
   }
   .button-primary{
@@ -96,7 +96,6 @@
     height: 50px;
     outline: none;
     margin-right: 0px;
-    box-shadow: 0 0 5px blueviolet;
     padding: 0 16px;
     font-size: 1.5rem;
     background: none;
@@ -133,7 +132,7 @@ font-size: 1.5rem;
 display: flex;
 flex-direction: column;
 overflow: hidden;
-background-color:white;
+background-color: rgb(255, 241, 204) ;
 width: 100%;
 margin-top: 0px;
 overflow: hidden;
@@ -170,7 +169,7 @@ text-decoration-style: capitalize;
    padding: 10px;
   margin: 0 5px;
    height: 200px;
-   background-color: rgba(71, 71, 243, 0.966);
+   background-color: rgba(243, 71, 71, 0.966);
    color: white;
    box-shadow: 0 0 10px rgb(102, 95, 95);
    width: 18%;

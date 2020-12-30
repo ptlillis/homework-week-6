@@ -1,5 +1,5 @@
 var cityHTML = document.querySelector('#cityHTML')
-
+console.log("you're in")
 var searchButton = document.getElementById('search-button');
 var input = document.querySelector('#input');
 var cities = document.querySelector('#cities');
@@ -29,7 +29,7 @@ iconPlace = document.querySelector("#icon");
 init();
 var storedlist = JSON.parse(localStorage.getItem('lists'));
 function init(){
-  storedlist = JSON.parse(localStorage.getItem('lists'));
+  var storedlist = JSON.parse(localStorage.getItem('lists'));
   console.log(storedlist);
   if (storedlist !== null) {
 
@@ -38,7 +38,7 @@ function init(){
         li.setAttribute["data-index", i]
         li.textContent= storedlist[i];
         cities.appendChild(li);
-        values = cities.lastChild.textContent;
+        var values = cities.lastChild.textContent;
         console.log(values);
         input.value = values;
         console.log(input.value);
@@ -59,8 +59,8 @@ $(document).ready(function () {
 
 var lists = [];
 
- function place(){
-   localStorage.place("lists", JSON.stringify(lists));
+ function setItem(){
+   localStorage.setItem("lists", JSON.stringify(lists));
  }
 
  searchButton.addEventListener('click', function(e) {
@@ -85,9 +85,9 @@ var lists = [];
             cities.appendChild(li)
             }
 
-        error.textContent = ""
+        userError.textContent = ""
         input.value = ""
-        place()
+        setItem()
         console.log(data)
         while (cityName === undefined) {
             $("card-div").empty()
@@ -100,7 +100,7 @@ var lists = [];
         result.innerHTML = data.name + ' (' + dt + ')'
 
         var tempRaw = parseFloat(data['main']['temp'])
-        var temperatureF = ((temp-273.15)*1.8)+32
+        var temperatureF = ((tempRaw-273.15)*1.8)+32
         tempBox.innerHTML = "Temperature (F): " + Math.round(temperatureF)
 
         var humidity = data['main']['humidity']
@@ -131,10 +131,10 @@ var lists = [];
             $(".card-div").empty()
             for (var i = 1; i <= 5; i++) {
                 var forDate = timeConverter(data['daily'][i]['dt'])
-                var forTemp = "Temperature (F): " + Math.round(data['daily'][i]['temp']['max'])
+                var forTemp = "Temperature (F): " + (Math.round((data['daily'][i]['temp']['max']-273.15)*1.8)+32)
                 var forHumid = "Humidity: " + data['daily'][i]['humidity'] + "%"
                 var forIcon = data['daily'][i]['weather']['0']['icon']
-                    forIconURL = "http://openweathermap.org/img/w/" + dIconCode + ".png"
+                    forIconURL = "http://openweathermap.org/img/w/" + forIcon + ".png"
 
                     var forImg = document.createElement('img')
 
