@@ -139,9 +139,11 @@ var lists = [];
 
                     var forImg = document.createElement('img')
 
-                    img.src = forIconURL
+                    forImg.src = forIconURL
                 var div = document.createElement('div')
-            var br = document.createElement('br')
+                var br = document.createElement('br')
+
+                div.classList.add("card-area")
             
                 div.append(forDate)
                 div.appendChild(br)

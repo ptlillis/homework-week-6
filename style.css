@@ -50,7 +50,7 @@
   }
   .second-col{
     width: 100%;
-     height: 90vh;
+     height: 50vh;
      margin: 0px;
   }
   .contentHigher{
@@ -79,7 +79,7 @@
     height: 50px;
     width: 50px;
     outline: none;
-    background-color: blue;
+    background-color: pink;
     font-size: 25px;
     color: white;
     justify-content: center;
@@ -167,22 +167,20 @@ text-decoration-style: capitalize;
 
  }
  .card-area{
-   padding: 10px;
-  margin: 0 5px;
-   height: 200px;
-   background-color: rgba(243, 71, 71, 0.966);
-   color: white;
-   box-shadow: 0 0 10px rgb(102, 95, 95);
-   width: 18%;
-   align-items: center;
-   justify-content: center;
-   font-weight: 600;
-   border-radius: 5px;
-  text-align: center;
- }
- .red{
-  color: red;
- }
+  padding: 10px;
+ margin: 0 5px;
+  height: 200px;
+  background-color: rgba(71, 71, 243, 0.966);
+  color: white;
+  box-shadow: 0 0 10px rgb(102, 95, 95);
+  width: 18%;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  border-radius: 5px;
+ text-align: center;
+}
+
 .form{
   padding-left: 3rem;
 }
