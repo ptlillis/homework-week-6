@@ -63,11 +63,11 @@ var lists = [];
    localStorage.setItem("lists", JSON.stringify(lists));
  }
 
- searchButton.addEventListener('click', function(e) {
+ cityHTML.addEventListener('submit', function(e) {
     e.preventDefault();
     $(".icon").empty();
 
-    var inputval = input.value.trim();
+    inputval = input.value.trim();
     console.log(inputval);
     if (inputval !== null) {
     fetch('https://api.openweathermap.org/data/2.5/weather?q='+ inputval +'&appid=66344966e0a23155ed5633e180b730e8')
@@ -91,7 +91,7 @@ var lists = [];
         console.log(data)
         while (cityName === undefined) {
             $("card-div").empty()
-            error.textContent = "City not found. Please enter valid city name."
+            userError.textContent = "City not found. Please enter valid city name."
             return
 
         }
@@ -130,6 +130,7 @@ var lists = [];
 
             $(".card-div").empty()
             for (var i = 1; i <= 5; i++) {
+              console.log(data)
                 var forDate = timeConverter(data['daily'][i]['dt'])
                 var forTemp = "Temperature (F): " + (Math.round((data['daily'][i]['temp']['max']-273.15)*1.8)+32)
                 var forHumid = "Humidity: " + data['daily'][i]['humidity'] + "%"
