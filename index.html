@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 6 - Weather Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href="style.css">
+</head>
+<body>
+    
+    <header class="header">
+        <h1>Weather Dashboard</h1>
+    </header>
+<div class="jumbotron mt-0">
+       <div class="row" id="row">
+           <div class="col col-3 first-col mt-0">
+                   <div><h3>Location by City:</h3>
+                   </div>
+                   <div class="form">
+                       <form id = "cityHTML" class="form-inline justify-content-center md-form form-sm">
+                           <input id ='input' class=" city form-control-sm" type="text" placeholder="Search" name="city"aria-label="Search"> 
+                           <i type="submit" class="fas fa-search  btn button-primary search-button"  id ="search-button" aria-hidden="true"></i>
+                           
+                       </form>
+                   </div>
+                       <div class="container">
+                           <ul id = "cities" class="cities">
+                       
+                           </ul>
+                       </div>
+                       
+           </div>
+               
+               
+           <div class="col col-8 second-col">
+                   <div class=" container-fluid bg-white upper-div" id="upperDiv">
+                       <h1 class="userError" id="userError"></h1>
+                       <div class=" container-fluid upperdiv" id = "contentHigher">
+                           <h3 id ="result"></h3>
+                           <div id="icon" class="icon"></div>
+                           <h5 id="copy"></h5>
+                           <h5 id="tempBox"></h5> 
+                           <h5 id="humidBox"></h5>
+                           <h5 id="windBox"></h5>
+                           <h3 id="uviBox"></h3>
+                       </div>
+               </div>
+                   <div class="lower-div" id="lowerDiv">
+                       <h2> 5-Day Forecast:</h3>
+                       <div id = "card-div" class="card-div">
+                           
+                       </div>
+                   </div>
+           </div>
+    </div>
+   
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
